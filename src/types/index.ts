@@ -22,4 +22,6 @@ export type Timings = {
 
 export type FIVE_PRAYERS_KEY = keyof Pick<Timings, 'Fajr' | 'Dhuhr' | 'Asr' | 'Maghrib' | 'Isha'>
 
-export type GetDailyPrayerTimesResponse = Response<Timings>
+export type GetDailyPrayerTimesResponse = Response<{
+  timings: Timings;
+}>
