@@ -1,5 +1,6 @@
 import { ALADHAN_API_URL, LOCATION } from '../constants';
 import { GetDailyPrayerTimesResponse } from '../types';
+import fetch from 'node-fetch';
 
 export const getDailyPrayerTimes = async (date: string) => {
   try {
@@ -7,7 +8,8 @@ export const getDailyPrayerTimes = async (date: string) => {
      const data = await response.json() as GetDailyPrayerTimesResponse;
 
      return data
-  } catch (_) {
+  } catch (err) {
+    console.error(err);
     throw new Error('Failed to fetch data');
   }
 }
