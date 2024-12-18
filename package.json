@@ -12,12 +12,13 @@
       "title": "Jadwal Salat",
       "subtitle": "Jadwal Salat Hari Ini",
       "description": "Menampilkan Jadwal Salat Hari Ini",
-      "mode": "no-view"
+      "mode": "view"
     }
   ],
   "dependencies": {
     "@raycast/api": "^1.88.3",
-    "@raycast/utils": "^1.17.0"
+    "@raycast/utils": "^1.17.0",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.11",
