@@ -4,20 +4,21 @@ export type Response<T> = {
   data: T;
 }
 
-export type Timings = {
-  Fajr: string;
-  Sunrise: string;
-  Dhuhr: string;
-  Asr: string;
-  Sunset: string;
-  Maghrib: string;
-  Isha: string;
-  Imsak: string;
-  Midnight: string;
-  Firstthird: string;
-  Lastthird: string;
-}
+export type TimeFormat = `${string}:${string}`
 
+export type Timings = {
+  Fajr: TimeFormat;
+  Sunrise: TimeFormat;
+  Dhuhr: TimeFormat;
+  Asr: TimeFormat;
+  Sunset: TimeFormat;
+  Maghrib: TimeFormat;
+  Isha: TimeFormat;
+  Imsak: TimeFormat;
+  Midnight: TimeFormat;
+  Firstthird: TimeFormat;
+  Lastthird: TimeFormat;
+}
 
 export type FIVE_PRAYERS_KEY = keyof Pick<Timings, 'Fajr' | 'Dhuhr' | 'Asr' | 'Maghrib' | 'Isha'>
 
